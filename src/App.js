@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+// import 
+import Sidebar from './components/sidebar/sidebar'
 
 function App() {
   return (
     <div className="App">
-     Hello.... This is the music streaming app.
+      <Sidebar />
     </div>
   );
 }
