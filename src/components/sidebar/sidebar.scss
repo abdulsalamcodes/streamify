@@ -1,16 +1,19 @@
-$pink-color: #EA4C89;
+$pink-color: #ff00cd;
+$deep-blue: #0c1639;
 
 .sidebar{
-    background-color: darkblue;
+    float: left;
+    background-color: $deep-blue;
     height: 100vh;
-    padding: 20px 0 0 25px;
+    padding: 40px 0 0 25px;
     width: 180px;
 }
 
-h1{
+.app-name h1{
     font-size: 25px;
-    color: #EA4C89;
+    color: $pink-color;
 }
+
 .app-name{
     text-decoration: none;
 }
@@ -19,10 +22,10 @@ h1{
     color: white;
 }
 
-p{
+.library{
     color: $pink-color;
-    padding-top: 40px;
-    font-size: 15px;
+    padding-top: 60px;
+    font-size: 13px;
 }
 
 .links-container{
@@ -40,6 +43,10 @@ p{
     text-decoration: none;
 }
 
+a:active{
+    color: $pink-color;
+}
+
 .link:hover{
     color: $pink-color;
 }
@@ -48,4 +55,8 @@ p{
     height: 20px;
     margin-right: 10px;
     width: 15px;
+}
+
+.icon:hover{
+    color: $pink-color;
 }

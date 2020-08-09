@@ -1,27 +1,38 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './sidebar.scss'
-import { ReactComponent as HomeIcon } from './home.svg'
-import { ReactComponent as MenuIcon } from './menu.svg'
+import { ReactComponent as HomeIcon } from './icons/home.svg'
+import { ReactComponent as MenuIcon } from './icons/menu.svg'
 
 function Sidebar() {
     return (
         <div className='sidebar'>
-            <Link to='/'className='app-name'>
+            <Link to='/' className='app-name'>
                 <h1>Stream<span className='sity'>sity</span></h1>
             </Link>
 
             <div>
-                <p>LIBRARY</p>
+                <p className='library'>LIBRARY</p>
                 <div className='links-container'>
-                    <Link to='/' className='link'>
-                        <HomeIcon className='icon' />
+                    <NavLink
+                        exact
+                        to='/'
+                        className='link'
+                        activeStyle={{ color: '#ff00cd' }}
+                    >
+                        <HomeIcon className='icon'
+                            activeStyle={{ color: '#ff00cd' }} />
                         Home
-                        </Link>
-                    <Link to='/browse' className='link'>
+                        </NavLink>
+
+                    <NavLink
+                        to='/browse'
+                        className='link'
+                        activeStyle={{ color: '#ff00cd' }}
+                    >
                         <MenuIcon className='icon' />
                         Browse
-                        </Link>
+                        </NavLink>
                 </div>
             </div>
         </div>
