@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 270 270" style="enable-background:new 0 0 270 270;" xml:space="preserve" width="512px" height="512px" class="hovered-paths"><g><g>
+	<g>
+		<path d="M114,0H10C4.5,0,0,4.5,0,10v104c0,5.5,4.5,10,10,10h104c5.5,0,10-4.5,10-10V10C124,4.5,119.5,0,114,0z M104,104H20V20h84    V104z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M260,0H156c-5.5,0-10,4.5-10,10v104c0,5.5,4.5,10,10,10h104c5.5,0,10-4.5,10-10V10C270,4.5,265.5,0,260,0z M250,104h-84    V20h84V104z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M114,146H10c-5.5,0-10,4.5-10,10v104c0,5.5,4.5,10,10,10h104c5.5,0,10-4.5,10-10V156C124,150.5,119.5,146,114,146z     M104,250H20v-84h84V250z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M260,146H156c-5.5,0-10,4.5-10,10v104c0,5.5,4.5,10,10,10h104c5.5,0,10-4.5,10-10V156C270,150.5,265.5,146,260,146z     M250,250h-84v-84h84V250z" data-original="#000000" class="hovered-path active-path" data-old_color="#000000" fill="#FFFFFF"/>
+	</g>
+</g></g> </svg>

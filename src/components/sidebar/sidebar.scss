@@ -1,0 +1,62 @@
+$pink-color: #ff00cd;
+$deep-blue: #0c1639;
+
+.sidebar{
+    float: left;
+    background-color: $deep-blue;
+    height: 100vh;
+    padding: 40px 0 0 25px;
+    width: 180px;
+}
+
+.app-name h1{
+    font-size: 25px;
+    color: $pink-color;
+}
+
+.app-name{
+    text-decoration: none;
+}
+
+.sity{
+    color: white;
+}
+
+.library{
+    color: $pink-color;
+    padding-top: 60px;
+    font-size: 13px;
+}
+
+.links-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px;
+}
+
+.link{
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 13px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+a:active{
+    color: $pink-color;
+}
+
+.link:hover{
+    color: $pink-color;
+}
+
+.icon{
+    height: 20px;
+    margin-right: 10px;
+    width: 15px;
+}
+
+.icon:hover{
+    color: $pink-color;
+}
