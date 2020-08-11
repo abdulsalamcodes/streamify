@@ -3,8 +3,11 @@ import './search-bar.scss'
 import { ReactComponent as SearchIcon } from './search.svg'
 
 class SearchBar extends Component {
-    state = {
-        query: ''
+    constructor() {
+        super();
+        this.props.state = {
+            query: ''
+        }
     }
 
     updateQuery = (query) => {

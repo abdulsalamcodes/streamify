@@ -9,7 +9,7 @@ function MusicList() {
             <h1 className='heading'>Results</h1>
             <div className='container row'>
                 <div className='img-and-song row'>
-                    <img className='artist-pic' src={ArtistPic} />
+                    <img className='artist-pic' src={ArtistPic} alt="" />
                     <div className='song-info column'>
                         <p className='song-title'>Song title</p>
                         <span className='artist-name'>Artist name</span>
