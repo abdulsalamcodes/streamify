@@ -5,7 +5,6 @@ import SearchBar from '../../components/search-bar/search-bar';
 
 class SearchPage extends Component {
     
-    
     render(){
         return (
             <div className='search'>

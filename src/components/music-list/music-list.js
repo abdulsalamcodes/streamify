@@ -1,25 +1,13 @@
 import React from 'react';
 // import ArtistPic from './eminem-picture.jpg'
-import { ReactComponent as PlayListIcon } from './icons/playlist.svg'
+import MusicCard from '../../components/music-cards/music-card'
 import './music-list.scss'
 
-function MusicList(props) {
+function MusicList({info, info_1, info_2, info_3}) {
     return (
         <div className='wrapper'>
             <h1 className='heading'>Results</h1>
-            <div className='container row'>
-                <div className='img-and-song row'>
-                    <img className='artist-pic' src={props.ArtistPic} alt = "Artist" />
-                    <div className='song-info column'>
-                        <p className='song-title'>Song title : {props.title}</p>
-                        <span className='artist-name'>Artist : {props.artist}</span>
-                    </div>
-                </div>
-                <div className='icon-and-duration row'>
-                    <span className='duration'>duration: {props.duration}</span>
-                    <PlayListIcon className='playlist' />
-                </div>
-            </div>
+            <MusicCard picture={info.artist.picture} title={info.title} name={info.artist.name} duration={info.duration}/>
         </div>
     )
 }
