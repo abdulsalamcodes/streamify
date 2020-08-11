@@ -3,6 +3,8 @@ import './search-bar.scss'
 import { ReactComponent as SearchIcon } from './search.svg'
 import MusicCard from '../music-cards/music-card'
 
+const API_KEY = ` d95cb209c9a54fbd9f1f3497752e3b8f&q`
+
 class SearchBar extends Component {
     constructor(){
     super();
@@ -24,22 +26,25 @@ class SearchBar extends Component {
     }
 
     onselect = ()=>{
-        this.setState({type : document.getElementById('selectElement').value})
+        this.setState({type : document.querySelector('selectElement').value})
     }
 
     onSubmit = ()=>{
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?apiKey= d95cb209c9a54fbd9f1f3497752e3b8f&q=${this.state.query}`,{
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/artist?apiKey=${API_KEY}=${this.state.query}`,{
             method : 'GET'
         })
-        .then(response=>{ return response.json() })
+        .then(response=>{ 
+            console.log(response.json());
+            return response.json() 
+        })
         .then(data =>{ 
-            if(this.state.type === "artist"){
-            this.setState ({result_artist : data})
+            if (this.state.type === "artist"){
+                this.setState ({result_artist : data})
             }
-            else if(this.state.type === "album"){
+            else if (this.state.type === "album"){
                 this.setState({result_album : data})
             }
-            else if(this.state.type === "track"){
+            else if (this.state.type === "track"){
                 this.setState({result_track : data})
             }
         })
@@ -48,7 +53,7 @@ class SearchBar extends Component {
 
     render() {
 
-        if(this.state.result){
+        if (this.state.result){
             return(
                 <div>
                     <div className='search-container'>
