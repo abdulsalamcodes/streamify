@@ -1,7 +1,8 @@
 $pink-color: #ff00cd;
 $deep-blue: #0c1639;
-
-.sidebar{
+$basic: 400;
+$thick: 700;
+.sidebar {
     float: left;
     background-color: $deep-blue;
     height: 100vh;
@@ -9,54 +10,57 @@ $deep-blue: #0c1639;
     width: 180px;
 }
 
-.app-name h1{
+.app-name h1 {
     font-size: 25px;
     color: $pink-color;
 }
 
-.app-name{
+.app-name {
     text-decoration: none;
 }
 
-.sity{
+.sity {
     color: white;
 }
 
-.library{
-    color: $pink-color;
-    padding-top: 60px;
-    font-size: 13px;
+.first-section {
+    height: 400px;
 }
 
-.links-container{
+.library,
+.discover {
+    font-weight: $thick;
+    color: $pink-color;
+    padding-top: 60px;
+    font-size: 15px;
+}
+
+.links-container {
     display: flex;
     flex-direction: column;
     padding-top: 25px;
 }
 
-.link{
+.link {
     align-items: center;
     color: white;
     display: flex;
     font-size: 13px;
     padding-bottom: 20px;
     text-decoration: none;
+    &:active {
+        color: $pink-color;
+    }
+    &:hover {
+        color: $pink-color;
+    }
 }
 
-a:active{
-    color: $pink-color;
-}
-
-.link:hover{
-    color: $pink-color;
-}
-
-.icon{
+.icon {
     height: 20px;
     margin-right: 10px;
     width: 15px;
-}
-
-.icon:hover{
-    color: $pink-color;
+    &:hover {
+        color: $pink-color;
+    }
 }

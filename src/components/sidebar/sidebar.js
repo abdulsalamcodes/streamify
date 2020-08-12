@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import './sidebar.scss'
 import { ReactComponent as HomeIcon } from './icons/home.svg'
@@ -10,29 +10,52 @@ function Sidebar() {
             <Link to='/' className='app-name'>
                 <h1>Stream<span className='sity'>sity</span></h1>
             </Link>
-
             <div>
-                <p className='library'>LIBRARY</p>
-                <div className='links-container'>
-                    <NavLink
-                        exact
-                        to='/'
-                        className='link'
-                        activeStyle={{ color: '#ff00cd' }}
-                    >
-                        <HomeIcon className='icon'
-                            activeStyle={{ color: '#ff00cd' }} />
-                        Home
+                <div className="first-section">
+                    <p className='library'>LIBRARY</p>
+                    <div className='links-container'>
+                        <NavLink
+                            exact
+                            to='/'
+                            className='link'
+                        >
+                            <HomeIcon className="icon" />
+                            Home
                         </NavLink>
 
-                    <NavLink
-                        to='/browse'
-                        className='link'
-                        activeStyle={{ color: '#ff00cd' }}
-                    >
-                        <MenuIcon className='icon' />
-                        Browse
+                        <NavLink
+                            to='/browse'
+                            className='link'
+                        >
+                            <MenuIcon className='icon' />
+                            Browse
                         </NavLink>
+                        
+                        <NavLink
+                            to='/playlist'
+                            className='link'
+                        >
+                            Playlist
+                        </NavLink>
+
+                        <NavLink
+                            to='/artists'
+                            className='link'
+                        >
+                            Artists
+                        </NavLink>
+                        
+                        <NavLink
+                            to='/albums'
+                            className='link'
+                            activeStyle={{ color: '#ff00cd' }}
+                        >
+                            Albums
+                        </NavLink>
+                    </div>
+                </div>
+                <div className="second-section">
+                    <p className="discover">DISCOVER</p>
                 </div>
             </div>
         </div>

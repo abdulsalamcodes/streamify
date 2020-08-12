@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactComponent as PlayListIcon } from './icons/playlist.svg'
-import './music-list.css'
+import './music-card.scss'
 
 const MusicCard = (props) =>{
     return(
