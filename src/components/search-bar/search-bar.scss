@@ -25,6 +25,7 @@ input::placeholder {
     height: 40px;
     margin-right: 10px;
     margin-left: 10px;
+    outline: none;
 }
 
 button {
@@ -35,4 +36,5 @@ button {
     height: 40px;
     font-size: 14px;
     border-radius: 20px;
+    outline: none;
 }

@@ -11,7 +11,7 @@ class SearchBar extends Component {
         this.state = {
             query: '',
             type: '',
-            searchResults: '',
+            searchResults: [],
             // result_artist: null,
             // result_album: '',
             // result_track: ''
@@ -38,6 +38,7 @@ class SearchBar extends Component {
                 return response.json()
             })
             .then(jsonResponse => {
+                console.log(jsonResponse)
                 this.setState({
                     searchResults: jsonResponse.data
                 }, () => console.log(this.state.searchResults)
