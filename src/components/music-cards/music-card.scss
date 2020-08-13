@@ -10,6 +10,10 @@ $white: whitesmoke;
     flex-direction: column;
 }
 
+li{
+    list-style: none;
+}
+
 .wrapper {
     padding-top: 20px;
 }
@@ -33,6 +37,7 @@ $white: whitesmoke;
 
 .container:hover {
     background-color: $deep-blue;
+    cursor: pointer;
 }
 
 .img-and-song {
