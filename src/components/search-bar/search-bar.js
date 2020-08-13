@@ -27,30 +27,9 @@ class SearchBar extends Component {
     }
 
     onSubmit = () => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${this.state.type}:${this.state.query}&apiKey=${API_KEY}`, {
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${this.state.type}:"${this.state.query}"&apiKey=${API_KEY}`, {
             method: 'GET'
         })
-<<<<<<< HEAD
-        .then(response=>{ 
-            return response.json() 
-        })
-        .then(data =>{ 
-            let searches = data.data;
-            searches.map(datas => {
-                this.setState({
-                    _id: data.id
-                })
-                if (this.state.type === "artist"){
-                    this.setState ({result_artist: datas.artist.name})
-                    return datas.artist;
-                }
-                else if (this.state.type === "album"){
-                    this.setState({result_album: datas.album})
-                }
-                else if (this.state.type === "track"){
-                    this.setState({result_track: datas.album})
-                }
-=======
             .then(response => {
                 return response.json()
             })
@@ -60,7 +39,6 @@ class SearchBar extends Component {
                     searchResults: jsonResponse.data
                 }, () => console.log(this.state.searchResults)
                 )
->>>>>>> 5be9478230719ceb889b388c3f33df35d635a518
             })
     }
     render() {

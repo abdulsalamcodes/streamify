@@ -4,8 +4,11 @@ import './music-list.scss'
 import AudioPlayer from 'react-audio-player'
 
 class MusicList extends Component {
-    state = {
-        song: ''
+    constructor(props) {
+        super(props);
+        this.state = {
+            song: ''
+        }
     }
 
     playSong = (link) => {
