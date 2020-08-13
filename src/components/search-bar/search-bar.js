@@ -12,9 +12,6 @@ class SearchBar extends Component {
             query: '',
             type: '',
             searchResults: [],
-            // result_artist: null,
-            // result_album: '',
-            // result_track: ''
         }
     }
 
@@ -22,7 +19,6 @@ class SearchBar extends Component {
         this.setState({
             query: event.target.value
         })
-
     }
 
     onselect = (e) => {
@@ -43,70 +39,32 @@ class SearchBar extends Component {
                     searchResults: jsonResponse.data
                 }, () => console.log(this.state.searchResults)
                 )
-                // let response = data.data;
-                // console.log(searches)
-                // console.log(data.data[1].album);
-                // searches.map(datas => {
-                //     if (this.state.type === "artist"){
-                //         this.setState ({result_artist: datas})
-                //         return datas.artist;
-                //     }
-                //     else if (this.state.type === "album"){
-                //         this.setState({result_album: datas.album})
-                //     }
-                //     else if (this.state.type === "track"){
-                //         this.setState({result_track: datas.album})
-                //     }
-                // // })
             })
     }
     render() {
-        // if (this.state.result_artist) {
-            return (
-                <div>
-                    <div className='search-container'>
-                        <SearchIcon className='icon' />
-                        <input
-                            type='text'
-                            placeholder='Search for songs, artists...'
-                            onChange={this.updateQuery}
-                        />
-                        <select onChange={this.onselect} id="selectElement">
-                            <option value="0">Search By</option>
-                            <option value="artist">Artist</option>
-                            <option value="album">Album</option>
-                            <option value="track">Song</option>
-                        </select>
-                        <button onClick={this.onSubmit}>Search</button>
-                    </div >
-                    <MusicList
-                        // info={this.state.result_artist} info_1={this.state.result_album} info_2={this.state.result_track}
-                        search={this.state.searchResults}
+        return (
+            <div>
+                <div className='search-container'>
+                    <SearchIcon className='icon' />
+                    <input
+                        type='text'
+                        placeholder='Search for songs, artists...'
+                        onChange={this.updateQuery}
                     />
-                </div>
-            )
-        }
-
-        // else if (!this.state.result_artist) {
-        //     return (
-        //         <div className='search-container'>
-        //             <SearchIcon className='icon' />
-        //             <input
-        //                 type='text'
-        //                 placeholder='Search for songs, artists...'
-        //                 onChange={this.updateQuery}
-        //             />
-        //             <select onChange={this.onselect} id="selectElement">
-        //                 <option value="0">Search By</option>
-        //                 <option value="artist">Artist</option>
-        //                 <option value="album">Album</option>
-        //                 <option value="track">Song</option>
-        //             </select>
-        //             <button onClick={this.onSubmit}>Search</button>
-        //         </div >
-        //     )
-        // }
-    // }
+                    <select onChange={this.onselect} id="selectElement">
+                        <option value="0">Search By</option>
+                        <option value="artist">Artist</option>
+                        <option value="album">Album</option>
+                        <option value="track">Song</option>
+                    </select>
+                    <button onClick={this.onSubmit}>Search</button>
+                </div >
+                <MusicList
+                    search={this.state.searchResults}
+                />
+            </div>
+        )
+    }
 }
 
 export default SearchBar

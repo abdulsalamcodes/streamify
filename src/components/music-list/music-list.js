@@ -13,25 +13,21 @@ class MusicList extends Component {
             song: link
         })
     }
-    
+
     render() {
-        const { search,
-            info, info_1, info_2, info_3
-        } = this.props
+        const { search } = this.props
         return (
             <div className='wrapper'>
                 <h1 className='heading'>Results</h1>
                 <AudioPlayer
-                    // className="mx-auto my-5"
                     src={this.state.song}
                     autoPlay
                     controls
                 />
                 <ul>
-                    {search == [] ? <p>No results for this search</p>
+                    {search === [] ? <p>No results for this search</p>
                         : search.map(song => (
                             <MusicCard
-                                // picture={info.artist.picture} title={info.title} name={info.artist.name} duration={info.duration}
                                 key={song.id}
                                 picture={song.artist.picture}
                                 title={song.title}
