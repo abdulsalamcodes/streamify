@@ -4,7 +4,6 @@ import './music-card.scss'
 
 const MusicCard = (props) =>{
     return(
-        <div className="card">
             <div className='container row'>
                 <div className='img-and-song row'>
                     <img className='artist-pic' src={props.picture} alt = "Artist" />
@@ -18,7 +17,6 @@ const MusicCard = (props) =>{
                     <PlayListIcon className='playlist' />
                 </div>
             </div>
-        </div>
     )
 
 }

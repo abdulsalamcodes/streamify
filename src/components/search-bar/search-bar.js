@@ -9,6 +9,7 @@ class SearchBar extends Component {
     constructor(){
     super();
     this.state = {
+        _id: '',
         query: '',
         type: '',
         result_artist: null,
@@ -38,10 +39,12 @@ class SearchBar extends Component {
         })
         .then(data =>{ 
             let searches = data.data;
-            console.log(data.data[1].album);
             searches.map(datas => {
+                this.setState({
+                    _id: data.id
+                })
                 if (this.state.type === "artist"){
-                    this.setState ({result_artist: datas})
+                    this.setState ({result_artist: datas.artist.name})
                     return datas.artist;
                 }
                 else if (this.state.type === "album"){
