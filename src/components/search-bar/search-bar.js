@@ -27,7 +27,7 @@ class SearchBar extends Component {
     }
 
     onSubmit = () => {
-        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${this.state.type}:${this.state.query}&apiKey=${API_KEY}`, {
+        fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search/?q=${this.state.type}:"${this.state.query}"&apiKey=${API_KEY}`, {
             method: 'GET'
         })
             .then(response => {
